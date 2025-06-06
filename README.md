@@ -9,12 +9,8 @@ It helps couples organize their special day by managing guest lists, budgets, an
 
 - [About the App](#about-the-app)  
 - [Key Features](#key-features)  
-- [Architecture and Design](#architecture-and-design)  
 - [Technologies](#technologies)  
 - [Installation](#installation)  
-- [Usage](#usage)  
-- [Contributing](#contributing)  
-- [License](#license)  
 
 ---
 
