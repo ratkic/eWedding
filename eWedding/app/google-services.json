@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1050156197939",
+    "project_id": "ewedding-e5401",
+    "storage_bucket": "ewedding-e5401.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1050156197939:android:ad56388ddc3195b17e1b46",
+        "android_client_info": {
+          "package_name": "com.example.ewedding"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBM2hfNGonTgoCzfvBS8v0Ud16KX5KaTV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
