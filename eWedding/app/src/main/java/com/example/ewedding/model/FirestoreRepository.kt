@@ -175,6 +175,9 @@ class FirestoreRepository {
             .collection("songs")
             .add(song)
             .addOnSuccessListener { onResult() }
+            .addOnFailureListener {
+                Log.e("Firestore", "Failed to add song", it)
+            }
     }
 
     // Dohvati sve pjesme
@@ -190,6 +193,10 @@ class FirestoreRepository {
                 }
                 onResult(songs)
             }
+            .addOnFailureListener {
+                Log.e("Firestore", "Failed to fetch songs", it)
+                onResult(emptyList())
+            }
     }
 
     // Ažuriraj pjesmu
@@ -197,8 +204,11 @@ class FirestoreRepository {
         val updated = mapOf("title" to song.title, "artist" to song.artist)
         db.collection("users").document(userId)
             .collection("songs").document(song.id)
-            .set(updated)
+            .update(updated)
             .addOnSuccessListener { onResult() }
+            .addOnFailureListener {
+                Log.e("Firestore", "Failed to update song", it)
+            }
     }
 
     // Obriši pjesmu
@@ -207,6 +217,9 @@ class FirestoreRepository {
             .collection("songs").document(songId)
             .delete()
             .addOnSuccessListener { onResult() }
+            .addOnFailureListener {
+                Log.e("Firestore", "Failed to delete song", it)
+            }
     }
 
 
