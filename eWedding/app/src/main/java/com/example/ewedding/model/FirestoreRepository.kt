@@ -109,8 +109,7 @@ class FirestoreRepository {
     // Spremanje troška
     fun addExpense(userId: String, name: String, amount: Double, onComplete: () -> Unit) {
         val expense = mapOf("name" to name, "amount" to amount)
-        FirebaseFirestore.getInstance()
-            .collection("users").document(userId)
+         db.collection("users").document(userId)
             .collection("expenses")
             .add(expense)
             .addOnSuccessListener { onComplete() }
