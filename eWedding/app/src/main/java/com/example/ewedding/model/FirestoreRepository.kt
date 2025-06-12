@@ -133,9 +133,8 @@ class FirestoreRepository {
 
 
     fun updateBudget(userId: String, newBudget: Double, onComplete: () -> Unit = {}) {
-        val data = mapOf("totalBudget" to newBudget)
         db.collection("users").document(userId)
-            .set(data, com.google.firebase.firestore.SetOptions.merge()) //merge - ne brise ostale podatke
+            .update("totalBudget", newBudget)
             .addOnSuccessListener { onComplete() }
             .addOnFailureListener {
                 Log.e("Firestore", "Failed to update budget", it)
